@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+}
+
+body{
+    font-family: Tahoma, Geneva, sans-serif;
+    background-image: url("img/plane.jpg");
+	background-position: center;
+    background-size: cover;
+    background-attachment: fixed;  	
+    height: 100%;
+    color: white;
+}
+
+.navbar {
+	font-weight: bold;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+
+.navbar li {
+	float: left;
+}
+
+.navbar a {
+	display: inline-block;
+	color: rgb(30, 36, 99);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	min-width: 150px;
+}
+
+.navbar a:hover, .accmenu a:hover, .active {
+	background-color: silver;
+}
+
+.main {
+	margin-top: 45px;
+	margin-left: 22%;
+    margin-right: 22%;
+    border-left-style: solid;
+    border-right-style: solid;
+    background-color: rgba(0,0,0,0.75);
+    padding: 10px;
+    height: 100%;
+}
+
+.fixedheader{
+	table-layout: fixed;
+	border: 3px solid white;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+.fixedheader th, td {
+	padding: 5px;
+	width: 160px;
+	height: 40px;
+	text-align: left;
+}
+
+.fixedheader th{
+	background-color: black;
+	color: white;
+	position: sticky;
+	top: 0px;
+}
+
+.fixedheader thead tr {
+	display: block;
+	position: relative;
+}
+
+.fixedheader tbody {
+	display: block;
+	overflow: auto;
+	width: 100%;
+	max-height: 600px;
+}
+
+.fixedheader tbody tr{
+	background-color: rgb(30, 36, 99);
+	color:white;
+}
+
+.fixedheader tbody tr:hover, .prikazLetova tbody tr:hover{
+	background-color: black;
+}
+
+.fixedheader a, .prikazLetova a, #prikazKarata a {
+	text-decoration: none;
+	color: white;
+}
+
+.prikazLetova {
+	color: white;
+	border: 3px solid white;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+	text-align: left;
+} 
+
+.prikazLetova th, .prikazKarata th {
+	background-color: black;
+}
+
+.prikazLetova tbody tr{
+	background-color: rgb(30, 36, 99);
+	color:white;
+}
+
+#prikazLetova tbody tr{
+	 background-color: rgb(30, 36, 99);
+}
+
+#prikazKarata table {
+	color: white;
+	background-color: rgb(30, 36, 99);
+}
+
+.succes {
+	padding: 20px;
+	background-color: #45da25;
+	color: white;
+}
+
+.alert {
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color:black;
+}
+
+.btn {
+	background-color: rgb(30, 36, 99);
+	color: white;
+	border: none;
+	padding: 15px, 32px;
+	text-align: center;
+	min-width: 100px;
+	display: inline-block;
+	font-size: 1em;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.navbar .login {
+	float: right;
+}
+
+.navbar input[type=text], .navbar input[type=password] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 2px solid rgb(30, 36, 99);
+  width:120px;
+}
+
+.navbar .login input[type=submit] {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: rgb(30, 36, 99);
+  color: white;
+  font-size: 17px;
+  border: 2px solid rgb(30, 36, 99);
+  cursor: pointer;
+}
+
+.main input, .main select {
+	font-size: 17px;
+	padding: 6px;
+	border: 2px solid rgb(30, 36, 99);
+	width: 150px;
+}
+
+.main input[type=submit] {
+	padding: 6px, 10px;
+	background-color: rgb(30, 36, 99);
+	border: 2px solid rgb(30, 36, 99);
+	cursor: pointer;
+	color: white;
+	font-size: 17px;
+}
+
+.accmenu {
+	background-color: white;
+	color: rgb(30, 36, 99);
+	list-style-type: none;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	margin-left: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.accmenu li{
+	display: block;
+	width: 100%;
+	left: 0px;
+	border-bottom: 1px solid black;
+}
+
+.accmenu a {
+	margin-left: 0px;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	color: rgb(30, 36, 99);
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.centerdiv {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	padding:10px;
+	top: 27%;
+	left: 27%;
+	right: 27%;
+	text-decoration: none;
+	text-align: center;
+	font-size: 28px;
+}
+
+.centerdiv a {
+	text-decoration: none;
+	color: blue;
+}

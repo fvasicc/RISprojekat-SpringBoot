@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="izvestajRezervacija" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e31c2410-8a4d-4ba2-a162-2beaf36e7650">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="putnikImePrezime" class="java.lang.String"/>
+	<parameter name="emailPutnik" class="java.lang.String"/>
+	<parameter name="putnikJMBG" class="java.lang.String"/>
+	<parameter name="putnikTelefon" class="java.lang.String"/>
+	<parameter name="datumRezervacije" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="alet.id" class="java.lang.Integer"/>
+	<field name="alet.polazniGrad.grad" class="java.lang.String"/>
+	<field name="alet.destinacija.grad" class="java.lang.String"/>
+	<field name="alet.vremePolaska" class="java.util.Date"/>
+	<field name="amesto.redniBroj" class="java.lang.Integer"/>
+	<field name="cenaKarta" class="java.lang.Double"/>
+	<field name="amesto.aklasa.naziv" class="java.lang.String"/>
+	<variable name="UKUPNA_CENA" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{cenaKarta}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="170" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="400" height="60" forecolor="#ED213C" uuid="b17d57cc-d705-44a6-8be6-a85d20627cf9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rezervacija]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="60" width="100" height="20" uuid="98a09db0-9858-49df-926e-30087852831c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Ime i prezime:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="80" width="100" height="20" uuid="1b09c2a1-6e47-4f15-acac-df79e18a8d61"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[email adresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="100" width="100" height="20" uuid="7bb3d0b0-9edc-46dd-a27a-207a15a4f7e6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[broj telefona:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="120" width="100" height="16" uuid="25a20c8a-d4f8-4734-9131-4365068ef3a6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[jmbg:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="62" width="240" height="16" uuid="8798a118-8635-4bb9-b6da-e243e78ead27"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{putnikImePrezime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="80" width="240" height="20" uuid="f13ded64-5225-440a-8961-9d6688f0b146"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{emailPutnik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="100" width="240" height="20" uuid="e7a2000e-3426-4024-941a-897f1dd16f07"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{putnikTelefon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="120" width="240" height="20" uuid="223c4f55-78a4-44da-ac88-45e295fd30ba"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{putnikJMBG}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="140" width="100" height="20" uuid="7921ee44-3d67-4a8a-9274-0eb573e676a2"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[datum rezervacije]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="140" width="240" height="20" uuid="c359c500-f0d4-4e30-882d-cb78107c49eb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{datumRezervacije}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="81" height="30" backcolor="#E3142D" uuid="bab4297d-17eb-48cc-91db-c760ded0d34f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17f93552-16a6-4772-8e50-77507c1f534c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID broj leta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="81" y="0" width="79" height="30" backcolor="#E3142D" uuid="9bb8bdde-f6f0-4b74-ad8d-3b2cd3c71f98">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e9fa0ea-b66a-4e8c-a865-284673e23df3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[od]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="160" y="0" width="79" height="30" backcolor="#E3142D" uuid="3fc45061-1844-447f-9e32-1450a7762f9d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7039b2d4-4bff-4f60-8409-ba5515082c22"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[do]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="239" y="0" width="79" height="30" backcolor="#E3142D" uuid="9bc3c9ef-fc33-4f1e-9fca-4b948351ed0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6d24dfd-87eb-4fbd-aa63-97a7c1c763b1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[vreme polaska]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="0" width="79" height="30" backcolor="#E3142D" uuid="160e4055-5487-40c6-9f43-3e8891d456d2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aad05e81-c218-4acd-a002-efb71eca53f6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[broj mesta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="476" y="0" width="79" height="30" backcolor="#E3142D" uuid="2f2ae719-95f2-4d6b-95b5-44e6a45bead1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f1ac2f1-d6af-490f-90e7-96e07cdf1372"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[cena karte]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="397" y="0" width="79" height="30" backcolor="#E3142D" uuid="852a752f-8e5e-473b-9e5d-8cb734088794">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2dbffcac-869c-41fa-9a82-510c0344015e"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[klasa]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="81" height="30" backcolor="#FA3E51" uuid="b7375a23-1653-45ca-a43a-aadb50ef30ec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17f93552-16a6-4772-8e50-77507c1f534c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alet.id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="81" y="0" width="79" height="30" backcolor="#FA3E51" uuid="20666248-e807-4ab9-903b-e821f22e8578">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e9fa0ea-b66a-4e8c-a865-284673e23df3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alet.polazniGrad.grad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="160" y="0" width="79" height="30" backcolor="#FA3E51" uuid="a0cf3d42-1019-4041-883b-a8aba04a5ec6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7039b2d4-4bff-4f60-8409-ba5515082c22"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alet.destinacija.grad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="239" y="0" width="79" height="30" backcolor="#FA3E51" uuid="a7a03d19-b5fe-4e99-8d59-74ce1d25a279">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6d24dfd-87eb-4fbd-aa63-97a7c1c763b1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alet.vremePolaska}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="318" y="0" width="79" height="30" backcolor="#FA3E51" uuid="1e39c76e-78f9-44c1-8802-153abf778a83">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aad05e81-c218-4acd-a002-efb71eca53f6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amesto.redniBroj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="475" y="0" width="79" height="30" backcolor="#FA3E51" uuid="f634c920-5294-4595-b8f2-26bb25ad484c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f1ac2f1-d6af-490f-90e7-96e07cdf1372"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cenaKarta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="397" y="0" width="79" height="30" backcolor="#FA3E51" uuid="3eb2d028-dbe7-42b6-92ef-ef35142a2c7f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2dbffcac-869c-41fa-9a82-510c0344015e"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amesto.aklasa.naziv}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="15" width="100" height="30" uuid="3deaebc0-9e4e-4dc4-88be-ff682b872e4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="4d3057aa-79ce-450d-bb7b-0466ddf7a107"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Ukupna cena:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="0" width="70" height="30" uuid="39555d5a-69ea-4fab-8678-bc01cdb9f451"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{UKUPNA_CENA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
