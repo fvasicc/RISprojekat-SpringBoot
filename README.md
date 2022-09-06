@@ -1,2 +1,1 @@
-"# RISprojekat-SpringBoot" 
-"# RISprojekat-SpringBoot" 
+Spring Boot projekat iz predmeta "Razvoj informacionih sistema" na trećoj godini studija na Prirodno-matematičkom fakultetu u Novom Sadu. JPA projekat na koji se ovaj projekat oslanja nalazi se na linku https://github.com/fvasicc/RISprojekat-JPA
